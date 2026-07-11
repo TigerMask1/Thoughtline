@@ -1,0 +1,41 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-meta">{{ page.date | date: "%B %-d, %Y" }}</p>
+  </header>
+
+  {% if site.adsense_client != "" %}
+  <div class="ad-slot ad-slot-top">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="{{ site.adsense_client }}"
+         data-ad-slot="TOP_SLOT_ID"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+  {% endif %}
+
+  {% if page.has_affiliate_links %}
+  <p class="affiliate-disclosure"><em>This post may contain affiliate links. If you buy something through one, we may earn a small commission at no extra cost to you.</em></p>
+  {% endif %}
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  {% if site.adsense_client != "" %}
+  <div class="ad-slot ad-slot-bottom">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="{{ site.adsense_client }}"
+         data-ad-slot="BOTTOM_SLOT_ID"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+  {% endif %}
+</article>

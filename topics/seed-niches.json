@@ -1,0 +1,55 @@
+{
+  "_comment": "Niches chosen using actual 2026 AI Overview exposure data by category: Relationships (54.8% exposure), Healthcare (43-63%), and Food/Recipe (50-70% traffic decline) are the worst-hit categories - avoided entirely. Shopping (3.2% exposure) and Real Estate (5.8% exposure) are the safest - Google still needs to show actual options/listings for those intents, which AI can't fully replace. So niches below lean toward 'browse and choose between real options' (shopping-adjacent) rather than 'get the single fact and leave' (informational/advice).",
+  "format_bias": "Prefer topics phrased as: 'X ideas for Y', 'X vs Y for [specific situation]', 'best X for [specific person/context]'. These work because the value is in browsing/comparing multiple concrete options, which mirrors shopping intent - the lowest AI-Overview-exposure category. Avoid single-fact phrasing ('how long does X take', 'what does X mean') and avoid relationship/dating and recipe/cooking topics entirely - those are the two highest-exposure categories in current data.",
+  "niches": [
+    {
+      "name": "gift ideas for specific people and occasions",
+      "notes": "shopping-adjacent intent (lowest AI Overview exposure category). Combine recipient type + occasion + budget for specificity, e.g. 'gifts for a coworker who just got into pottery under $30'"
+    },
+    {
+      "name": "what to look for when buying specific everyday items",
+      "notes": "buying-guide format, not reviews of specific products (avoids needing to verify prices/availability). 'What to check before buying a used X', 'X vs Y for someone who needs Z'"
+    },
+    {
+      "name": "beginner houseplant care by specific plant and problem",
+      "notes": "compound queries like 'why is my [specific plant] doing [specific thing]' - general advice only, no guaranteed outcomes"
+    },
+    {
+      "name": "what to write in cards and notes for specific occasions",
+      "notes": "template/fill-in-the-blank format - thank you notes, sympathy cards, congratulations. High copy-paste value, output can't be fully replaced by a one-line AI summary"
+    },
+    {
+      "name": "small space and budget home organization products and setups",
+      "notes": "framed around comparing storage/organization approaches for specific spaces - apartment-specific, rental-friendly"
+    },
+    {
+      "name": "board games and party games by group type",
+      "notes": "'games for X group size/vibe/age mix' - comparison-heavy, good candidate for a filterable/interactive tool later instead of static pages"
+    },
+    {
+      "name": "journaling and reflection prompts by mood or goal",
+      "notes": "prompt lists - inherently browse-format, people pick one rather than getting 'the answer'"
+    },
+    {
+      "name": "hosting small gatherings on a budget - supplies and setup ideas",
+      "notes": "potlucks, game nights - checklist/idea-list and what-to-buy-or-borrow format"
+    },
+    {
+      "name": "hobby starter kits and what you actually need for low-cost creative hobbies",
+      "notes": "sketching, embroidery, journaling, baking basics - 'what to buy to start X without overspending' framing, shopping-adjacent"
+    },
+    {
+      "name": "pet-friendly enrichment ideas and products for common small pets",
+      "notes": "general enrichment/toy/activity ideas for cats, dogs, small pets - NOT medical/health advice, redirect health-adjacent questions to 'ask a vet'"
+    },
+    {
+      "name": "packing lists and what to bring for specific trip types",
+      "notes": "'what to pack for X specific trip type' - camping, carry-on only, cold weather trip. List/checklist format, avoid destination-specific facts (prices, hours, visa rules)"
+    },
+    {
+      "name": "comparison guides for common household decisions",
+      "notes": "'X vs Y for [specific situation]' - e.g. storage solutions, cleaning approaches, organizational systems. Decision-between-real-options format mirrors shopping intent"
+    }
+  ]
+}
+

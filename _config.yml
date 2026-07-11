@@ -1,0 +1,24 @@
+title: "Your Site Name"
+description: "Short description of your site for SEO"
+url: "https://yourusername.github.io"
+baseurl: ""
+
+markdown: kramdown
+theme: minima
+
+# Google AdSense client ID goes here once approved, e.g. "ca-pub-XXXXXXXXXXXX"
+adsense_client: ""
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+permalink: /:categories/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
