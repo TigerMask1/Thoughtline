@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<section class="hero">
+  <span class="eyebrow">// {{ site.tagline }}</span>
+  <h1>{{ site.hero_headline | default: "Ideas worth the click." }}</h1>
+  <p>{{ site.description }}</p>
+</section>
+
+<div class="post-grid">
+  {% for post in site.posts %}
+  <a class="post-card" href="{{ post.url | relative_url }}">
+    <span class="card-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <h2>{{ post.title }}</h2>
+  </a>
+  {% endfor %}
+</div>

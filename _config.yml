@@ -1,7 +1,9 @@
-title: "Your Site Name"
-description: "Short description of your site for SEO"
-url: "https://yourusername.github.io"
-baseurl: ""
+title: "Thoughtline"
+tagline: "considered picks, not padded lists"
+hero_headline: "Ideas worth the click."
+description: "Thoughtline is a small, considered guide to gifts, everyday buying decisions, and the little things that are easy to get wrong. No filler, no fluff — just the specific answer you came for."
+url: "https://tigermask1.github.io"
+baseurl: "/Thoughtline"
 
 markdown: kramdown
 theme: minima
