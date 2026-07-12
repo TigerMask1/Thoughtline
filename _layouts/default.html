@@ -4,19 +4,43 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }} — {{ site.tagline }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt and page.excerpt != '' %}{{ page.excerpt | strip_html | truncate: 155 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt and page.excerpt != '' %}{{ page.excerpt | strip_html | truncate: 155 }}{% else %}{{ site.description }}{% endif %}">
 
   <!-- Open Graph / social preview -->
   <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-  <meta property="og:description" content="{% if page.excerpt and page.excerpt != '' %}{{ page.excerpt | strip_html | truncate: 155 }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt and page.excerpt != '' %}{{ page.excerpt | strip_html | truncate: 155 }}{% else %}{{ site.description }}{% endif %}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:site_name" content="{{ site.title }}">
-  <meta name="twitter:card" content="summary">
+  {% if page.image %}<meta property="og:image" content="{{ page.image }}">{% endif %}
+  <meta name="twitter:card" content="{% if page.image %}summary_large_image{% else %}summary{% endif %}">
   <meta name="theme-color" content="#fdfdfc">
 
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/logo.svg' | relative_url }}">
+  <meta name="google-site-verification" content="EjN61tLQOww8B_YMbpo7BJH4DAaXWJ5bz10kkuDo5Ho" />
+
+  {% if page.layout == 'post' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": {{ page.title | jsonify }},
+    "description": {{ page.description | default: site.description | jsonify }},
+    "datePublished": "{{ page.date | date_to_xmlschema }}",
+    "dateModified": "{{ page.date | date_to_xmlschema }}"
+    {% if page.image %}, "image": "{{ page.image }}"{% endif %},
+    "publisher": {
+      "@type": "Organization",
+      "name": {{ site.title | jsonify }}
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ page.url | absolute_url }}"
+    }
+  }
+  </script>
+  {% endif %}
 
   <!-- Typefaces: Space Grotesk (display) / Source Serif 4 (body) / JetBrains Mono (meta) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">

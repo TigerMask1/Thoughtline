@@ -27,6 +27,18 @@ layout: default
     {{ content }}
   </div>
 
+  {% assign related = site.posts | where_exp: "post", "post.url != page.url" | slice: 0, 3 %}
+  {% if related.size > 0 %}
+  <nav class="related-posts" aria-label="Related reading">
+    <h3 class="related-heading">Related reading</h3>
+    <ul>
+      {% for post in related %}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+  {% endif %}
+
   {% if site.adsense_client and site.adsense_client != "" %}
   <div class="ad-slot ad-slot-bottom">
     <ins class="adsbygoogle"

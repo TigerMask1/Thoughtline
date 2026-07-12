@@ -302,6 +302,60 @@ body {
   text-align: center;
 }
 
+.post-content img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  display: block;
+  margin: 0 0 8px;
+}
+
+.post-content p em:has(> a) {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-faint);
+  font-style: normal;
+  margin: 0 0 2em;
+}
+
+.related-posts {
+  margin-top: 48px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+
+.related-heading {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-faint);
+  margin: 0 0 14px;
+  font-weight: 500;
+}
+
+.related-posts ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.related-posts li {
+  margin-bottom: 10px;
+}
+
+.related-posts a {
+  font-family: var(--font-display);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2px;
+}
+
+.related-posts a:hover { border-color: var(--purple); }
+
 /* ===== Footer ===== */
 .site-footer {
   max-width: 1080px;
